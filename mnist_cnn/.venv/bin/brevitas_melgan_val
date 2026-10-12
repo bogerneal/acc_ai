@@ -1,0 +1,6 @@
+#!/home/za_warudo/projects/mnist_cnn/.venv/bin/python
+import sys
+from brevitas_examples.text_to_speech.melgan_val import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

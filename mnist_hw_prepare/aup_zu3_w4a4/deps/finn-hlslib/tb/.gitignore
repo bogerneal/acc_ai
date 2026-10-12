@@ -1,0 +1,5 @@
+# Ignore synthesis files and logs
+/hls-syn*/
+/*_hls.log
+/config.h
+/memdata.h

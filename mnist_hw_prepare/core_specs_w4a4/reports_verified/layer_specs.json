@@ -1,0 +1,579 @@
+{
+  "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/05_dataflow_core.onnx",
+  "source_sha256": "a4f74ee437f77108bff16fbcffc0c2a3b7665a4238806d956ccc4d0e8e66390d",
+  "fpga_part": null,
+  "backend": null,
+  "clock_ns": null,
+  "source_unchanged": true,
+  "checks": {
+    "layers": 8,
+    "mvau_candidate_pairs": 217,
+    "profile_count": 3,
+    "all_candidate_divisibility_checks_passed": true
+  },
+  "limitations": [
+    "Candidates satisfy abstract divisibility only.",
+    "SWG widths assume serial-window output; backend parallel_window not selected.",
+    "Ideal MAC iteration counts exclude stalls, pipeline overhead, SWG/pooling bottlenecks and memory bandwidth; not latency or FPS.",
+    "Profiles require specialization, stream-width conversion and validation.",
+    "Original node names may change during specialization.",
+    "No model attributes or weights have been modified."
+  ],
+  "layers": [
+    {
+      "index": 0,
+      "name": "ConvolutionInputGenerator_0",
+      "op": "ConvolutionInputGenerator",
+      "input_shape": [
+        1,
+        28,
+        28,
+        1
+      ],
+      "output_shape": [
+        1,
+        24,
+        24,
+        25
+      ],
+      "input_type": "UINT8",
+      "output_type": "UINT8",
+      "current_input_stream_bits": 8,
+      "current_output_stream_bits": 8,
+      "explicit_attributes": {
+        "ConvKernelDim": [
+          5,
+          5
+        ],
+        "Dilation": [
+          1,
+          1
+        ],
+        "IFMChannels": 1,
+        "IFMDim": [
+          28,
+          28
+        ],
+        "OFMDim": [
+          24,
+          24
+        ],
+        "SIMD": 1,
+        "Stride": [
+          1,
+          1
+        ],
+        "backend": "fpgadataflow",
+        "depthwise": 0,
+        "inputDataType": "UINT8",
+        "is1D": 0,
+        "outputDataType": "UINT8"
+      },
+      "IFMChannels": 1,
+      "kernel": [
+        5,
+        5
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "current_SIMD": 1,
+      "SIMD_candidates": [
+        1
+      ],
+      "constraint": "SIMD divides IFMChannels; parallel_window/backend not selected"
+    },
+    {
+      "index": 1,
+      "name": "MVAU_0",
+      "op": "MVAU",
+      "input_shape": [
+        1,
+        24,
+        24,
+        25
+      ],
+      "output_shape": [
+        1,
+        24,
+        24,
+        16
+      ],
+      "input_type": "UINT8",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 8,
+      "current_output_stream_bits": 4,
+      "explicit_attributes": {
+        "ActVal": 0,
+        "MH": 16,
+        "MW": 25,
+        "PE": 1,
+        "SIMD": 1,
+        "backend": "fpgadataflow",
+        "binaryXnorMode": 0,
+        "inputDataType": "UINT8",
+        "noActivation": 0,
+        "numInputVectors": [
+          1,
+          24,
+          24
+        ],
+        "outputDataType": "UINT4",
+        "weightDataType": "INT4"
+      },
+      "MW": 25,
+      "MH": 16,
+      "weight_type": "INT4",
+      "weight_count": 400,
+      "weight_shape": [
+        25,
+        16
+      ],
+      "accumulator_type": "INT32",
+      "accumulator_note": "Attribute/default, not final synthesized accumulator width",
+      "input_vectors": [
+        1,
+        24,
+        24
+      ],
+      "no_activation": false,
+      "PE_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "SIMD_candidates": [
+        1,
+        5,
+        25
+      ],
+      "current": {
+        "PE": 1,
+        "SIMD": 1,
+        "neuron_folds": 16,
+        "synapse_folds": 25,
+        "ideal_mac_iterations_per_image": 230400,
+        "parallel_mac_lanes": 1,
+        "input_stream_bits": 8,
+        "output_stream_bits": 4,
+        "weight_bits_per_pe": 4
+      },
+      "threshold_shape": [
+        16,
+        15
+      ]
+    },
+    {
+      "index": 2,
+      "name": "StreamingMaxPool_0",
+      "op": "StreamingMaxPool",
+      "input_shape": [
+        1,
+        24,
+        24,
+        16
+      ],
+      "output_shape": [
+        1,
+        12,
+        12,
+        16
+      ],
+      "input_type": "UINT4",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 64,
+      "current_output_stream_bits": 64,
+      "explicit_attributes": {
+        "CeilMode": 0,
+        "ImgDim": [
+          24,
+          24
+        ],
+        "NumChannels": 16,
+        "PE": 1,
+        "PoolDim": [
+          2,
+          2
+        ],
+        "backend": "fpgadataflow",
+        "dataType": "UINT4"
+      },
+      "channels": 16,
+      "pool": [
+        2,
+        2
+      ],
+      "current_PE": 1,
+      "constraint": "2D StreamingMaxPool: PE is not a folding control; full-channel stream"
+    },
+    {
+      "index": 3,
+      "name": "ConvolutionInputGenerator_1",
+      "op": "ConvolutionInputGenerator",
+      "input_shape": [
+        1,
+        12,
+        12,
+        16
+      ],
+      "output_shape": [
+        1,
+        8,
+        8,
+        400
+      ],
+      "input_type": "UINT4",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 64,
+      "current_output_stream_bits": 64,
+      "explicit_attributes": {
+        "ConvKernelDim": [
+          5,
+          5
+        ],
+        "Dilation": [
+          1,
+          1
+        ],
+        "IFMChannels": 16,
+        "IFMDim": [
+          12,
+          12
+        ],
+        "OFMDim": [
+          8,
+          8
+        ],
+        "SIMD": 16,
+        "Stride": [
+          1,
+          1
+        ],
+        "backend": "fpgadataflow",
+        "depthwise": 0,
+        "inputDataType": "UINT4",
+        "is1D": 0,
+        "outputDataType": "UINT4"
+      },
+      "IFMChannels": 16,
+      "kernel": [
+        5,
+        5
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "current_SIMD": 16,
+      "SIMD_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "constraint": "SIMD divides IFMChannels; parallel_window/backend not selected"
+    },
+    {
+      "index": 4,
+      "name": "MVAU_1",
+      "op": "MVAU",
+      "input_shape": [
+        1,
+        8,
+        8,
+        400
+      ],
+      "output_shape": [
+        1,
+        8,
+        8,
+        32
+      ],
+      "input_type": "UINT4",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 4,
+      "current_output_stream_bits": 4,
+      "explicit_attributes": {
+        "ActVal": 0,
+        "MH": 32,
+        "MW": 400,
+        "PE": 1,
+        "SIMD": 1,
+        "backend": "fpgadataflow",
+        "binaryXnorMode": 0,
+        "inputDataType": "UINT4",
+        "noActivation": 0,
+        "numInputVectors": [
+          1,
+          8,
+          8
+        ],
+        "outputDataType": "UINT4",
+        "weightDataType": "INT4"
+      },
+      "MW": 400,
+      "MH": 32,
+      "weight_type": "INT4",
+      "weight_count": 12800,
+      "weight_shape": [
+        400,
+        32
+      ],
+      "accumulator_type": "INT32",
+      "accumulator_note": "Attribute/default, not final synthesized accumulator width",
+      "input_vectors": [
+        1,
+        8,
+        8
+      ],
+      "no_activation": false,
+      "PE_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "SIMD_candidates": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        10,
+        16,
+        20,
+        25,
+        40,
+        50,
+        80,
+        100,
+        200,
+        400
+      ],
+      "current": {
+        "PE": 1,
+        "SIMD": 1,
+        "neuron_folds": 32,
+        "synapse_folds": 400,
+        "ideal_mac_iterations_per_image": 819200,
+        "parallel_mac_lanes": 1,
+        "input_stream_bits": 4,
+        "output_stream_bits": 4,
+        "weight_bits_per_pe": 4
+      },
+      "threshold_shape": [
+        32,
+        15
+      ]
+    },
+    {
+      "index": 5,
+      "name": "StreamingMaxPool_1",
+      "op": "StreamingMaxPool",
+      "input_shape": [
+        1,
+        8,
+        8,
+        32
+      ],
+      "output_shape": [
+        1,
+        4,
+        4,
+        32
+      ],
+      "input_type": "UINT4",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 128,
+      "current_output_stream_bits": 128,
+      "explicit_attributes": {
+        "CeilMode": 0,
+        "ImgDim": [
+          8,
+          8
+        ],
+        "NumChannels": 32,
+        "PE": 1,
+        "PoolDim": [
+          2,
+          2
+        ],
+        "backend": "fpgadataflow",
+        "dataType": "UINT4"
+      },
+      "channels": 32,
+      "pool": [
+        2,
+        2
+      ],
+      "current_PE": 1,
+      "constraint": "2D StreamingMaxPool: PE is not a folding control; full-channel stream"
+    },
+    {
+      "index": 6,
+      "name": "MVAU_2",
+      "op": "MVAU",
+      "input_shape": [
+        1,
+        4,
+        4,
+        32
+      ],
+      "output_shape": [
+        1,
+        128
+      ],
+      "input_type": "UINT4",
+      "output_type": "UINT4",
+      "current_input_stream_bits": 4,
+      "current_output_stream_bits": 4,
+      "explicit_attributes": {
+        "ActVal": 0,
+        "MH": 128,
+        "MW": 512,
+        "PE": 1,
+        "SIMD": 1,
+        "backend": "fpgadataflow",
+        "binaryXnorMode": 0,
+        "inputDataType": "UINT4",
+        "noActivation": 0,
+        "numInputVectors": [
+          1
+        ],
+        "outputDataType": "UINT4",
+        "weightDataType": "INT4"
+      },
+      "MW": 512,
+      "MH": 128,
+      "weight_type": "INT4",
+      "weight_count": 65536,
+      "weight_shape": [
+        512,
+        128
+      ],
+      "accumulator_type": "INT32",
+      "accumulator_note": "Attribute/default, not final synthesized accumulator width",
+      "input_vectors": [
+        1
+      ],
+      "no_activation": false,
+      "PE_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "SIMD_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "current": {
+        "PE": 1,
+        "SIMD": 1,
+        "neuron_folds": 128,
+        "synapse_folds": 512,
+        "ideal_mac_iterations_per_image": 65536,
+        "parallel_mac_lanes": 1,
+        "input_stream_bits": 4,
+        "output_stream_bits": 4,
+        "weight_bits_per_pe": 4
+      },
+      "threshold_shape": [
+        128,
+        15
+      ]
+    },
+    {
+      "index": 7,
+      "name": "MVAU_3",
+      "op": "MVAU",
+      "input_shape": [
+        1,
+        128
+      ],
+      "output_shape": [
+        1,
+        10
+      ],
+      "input_type": "UINT4",
+      "output_type": "INT32",
+      "current_input_stream_bits": 4,
+      "current_output_stream_bits": 32,
+      "explicit_attributes": {
+        "ActVal": 0,
+        "MH": 10,
+        "MW": 128,
+        "PE": 1,
+        "SIMD": 1,
+        "backend": "fpgadataflow",
+        "binaryXnorMode": 0,
+        "inputDataType": "UINT4",
+        "noActivation": 1,
+        "numInputVectors": [
+          1
+        ],
+        "outputDataType": "INT32",
+        "weightDataType": "INT4"
+      },
+      "MW": 128,
+      "MH": 10,
+      "weight_type": "INT4",
+      "weight_count": 1280,
+      "weight_shape": [
+        128,
+        10
+      ],
+      "accumulator_type": "INT32",
+      "accumulator_note": "Attribute/default, not final synthesized accumulator width",
+      "input_vectors": [
+        1
+      ],
+      "no_activation": true,
+      "PE_candidates": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "SIMD_candidates": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "current": {
+        "PE": 1,
+        "SIMD": 1,
+        "neuron_folds": 10,
+        "synapse_folds": 128,
+        "ideal_mac_iterations_per_image": 1280,
+        "parallel_mac_lanes": 1,
+        "input_stream_bits": 4,
+        "output_stream_bits": 32,
+        "weight_bits_per_pe": 4
+      }
+    }
+  ]
+}

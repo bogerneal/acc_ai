@@ -1,0 +1,6 @@
+{
+  "format": "standard FP32 ONNX; not QONNX or FINN-ONNX",
+  "max_abs_error": 5.960464477539062e-07,
+  "validation": "4 synthetic samples",
+  "checkpoint": "runs/20260906_233834_241158/best.pth"
+}

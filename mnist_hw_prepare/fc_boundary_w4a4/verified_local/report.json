@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "source": "/home/za_warudo/projects/mnist_hw_prepare/mnist_hw_prepare/local_check_2/03_hw_layers.onnx",
+  "input_source": "/home/za_warudo/projects/mnist_hw_prepare/mnist_hw_prepare/local_check_2/input.npy",
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "validation": "Weight permutation proof and Python verification with an explicit NHWC Flatten adapter; not direct hardware-graph or RTL simulation",
+  "source_sha256": "ddb98f5c42cebdcc887c01eba94437ab18d64b79642e1b6da1caa314cc0d63fe",
+  "input_sha256": "42b1c964c600647b4614a3dea64691b59633cb89d51c35802377d4cc7b636ccd",
+  "boundary": {
+    "transpose": "Transpose_1",
+    "flatten": "Flatten_0",
+    "fc": "MVAU_2",
+    "input_shape": [
+      1,
+      4,
+      4,
+      32
+    ],
+    "weight_shape": [
+      512,
+      128
+    ]
+  },
+  "before_nodes": {
+    "MultiThreshold": 1,
+    "Transpose": 2,
+    "ConvolutionInputGenerator": 2,
+    "MVAU": 4,
+    "StreamingMaxPool": 2,
+    "Flatten": 1,
+    "Mul": 1,
+    "Add": 1
+  },
+  "after_nodes": {
+    "MultiThreshold": 1,
+    "Transpose": 1,
+    "ConvolutionInputGenerator": 2,
+    "MVAU": 4,
+    "StreamingMaxPool": 2,
+    "Mul": 1,
+    "Add": 1
+  },
+  "weight_permutation_exact": true,
+  "other_nodes_and_initializers_unchanged": true,
+  "samples": 18,
+  "comparisons": [
+    {
+      "sample": 0,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 1,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 2,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 3,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 4,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 5,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 6,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 7,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 8,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 9,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 10,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 11,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 12,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 13,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 14,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 15,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 16,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    },
+    {
+      "sample": 17,
+      "passed": true,
+      "max_abs_error": 0.0,
+      "same_argmax": true
+    }
+  ],
+  "max_abs_error": 0.0,
+  "argmax_agreement": 1.0,
+  "fc_products_exact": true,
+  "total_seconds": 22.135418797000057
+}

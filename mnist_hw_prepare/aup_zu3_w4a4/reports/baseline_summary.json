@@ -1,0 +1,27 @@
+{
+  "scope": "preparation, Python reference verification and source generation ONLY",
+  "repetitions": 3,
+  "full_hardware_builds": 0,
+  "timings": {
+    "T_verify_python": {
+      "median_seconds": 29.00262721699994,
+      "min_seconds": 27.63441508400001,
+      "max_seconds": 29.081494579000037
+    },
+    "T_prepare": {
+      "median_seconds": 0.14865828000006331,
+      "min_seconds": 0.13276815599999736,
+      "max_seconds": 0.3890174160000015
+    },
+    "T_codegen": {
+      "median_seconds": 1.773494481000057,
+      "min_seconds": 1.59206876799999,
+      "max_seconds": 1.792466468999919
+    },
+    "T_stream_interfaces": {
+      "median_seconds": 0.01098588699994707,
+      "min_seconds": 0.009751696999956039,
+      "max_seconds": 0.011589497000045412
+    }
+  }
+}

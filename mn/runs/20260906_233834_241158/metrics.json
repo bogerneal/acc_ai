@@ -1,0 +1,26 @@
+{
+  "model": {
+    "n1": 16,
+    "n2": 32,
+    "n3": 128,
+    "dropout": 0.5
+  },
+  "seed": 42,
+  "epochs": 5,
+  "lr": 0.001,
+  "batch_size": 128,
+  "device": "cpu",
+  "split": {
+    "train": 55000,
+    "validation": 5000,
+    "test": 10000
+  },
+  "best_epoch": 5,
+  "best_val_accuracy": 0.9888,
+  "test_loss": 0.028054051550873555,
+  "test_accuracy": 0.9912,
+  "torch": "2.5.1+cpu",
+  "torchvision": "0.20.1+cpu",
+  "preprocessing": "ToTensor: grayscale [0,1]",
+  "quantized": false
+}

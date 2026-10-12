@@ -1,0 +1,28 @@
+{
+  "fp32_val_accuracy": 0.9888,
+  "qat_val_accuracy": 0.9922,
+  "qat_test_accuracy": 0.9922,
+  "fp32_test_accuracy": 0.9912,
+  "accuracy_drop_pp": -0.10000000000000009,
+  "group": "W6A6",
+  "input_bits": 8,
+  "split_seed": 42,
+  "batch_size": 128,
+  "training_seconds": 63.872497788001056,
+  "test_seconds": 1.0556889179970312,
+  "best_epoch": 5,
+  "config": {
+    "n1": 16,
+    "n2": 32,
+    "n3": 128,
+    "dropout": 0.5,
+    "wbits": 6,
+    "abits": 6
+  },
+  "lr": 0.0001,
+  "epochs": 5,
+  "seed": 42,
+  "source_fp32": "/home/za_warudo/projects/mn/runs/20260906_233834_241158/best.pth",
+  "torch": "2.5.1+cpu",
+  "brevitas": "0.13.2"
+}

@@ -1,0 +1,301 @@
+{
+  "run_id": "baseline_initial",
+  "status": "sources_generated_hardware_validation_pending",
+  "events": [
+    {
+      "name": "T_prepare",
+      "status": "passed",
+      "seconds": 0.4286564899999803
+    },
+    {
+      "name": "T_stream_interfaces",
+      "status": "passed",
+      "seconds": 0.020545086999959494
+    },
+    {
+      "name": "T_verify_python",
+      "status": "passed",
+      "seconds": 30.247196505000034
+    },
+    {
+      "name": "T_codegen",
+      "status": "passed",
+      "seconds": 2.044074445999968
+    }
+  ],
+  "hls_synthesis": "not_run",
+  "cppsim": "not_run",
+  "rtlsim": "not_run",
+  "stitch": "not_run",
+  "fifo_validation": "not_run",
+  "part_support": "unconfirmed",
+  "environment": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "executable": "/home/za_warudo/projects/mnist_cnn/.venv-finn/bin/python",
+    "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "cpu_count": 12,
+    "cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 151\nmodel name\t: 12th Gen Intel(R) Core(TM) i5-12400\nstepping\t: 2\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 2495.999\ncache size\t: 18432 KB\nphysical id\t: 0\nsiblings\t: 12\ncore id\t\t: 0\ncpu cores\t: 6\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 21\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves umip gfni vaes vpclmulqdq rdpid fsrm md_clear flush_l1d arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed eibrs_pbrsb bhi spectre_v2_user its\nbogomips\t: 4991.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 39 bits physical, 48 bits virtual\npower management:",
+    "meminfo": "MemTotal:       16246240 kB\nMemFree:        15389104 kB\nMemAvailable:   15578068 kB\nBuffers:           11096 kB\nCached:           360012 kB\nSwapCached:            0 kB\nActive:            43388 kB\nInactive:         479728 kB\nActive(anon):       3120 kB\nInactive(anon):   152892 kB\nActive(file):      40268 kB\nInactive(file):   326836 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:       4194304 kB\nSwapFree:        4194304 kB\nDirty:               208 kB\nWriteback:             0 kB\nAnonPages:        152192 kB\nMapped:           267312 kB\nShmem:              4144 kB\nKReclaimable:      17304 kB\nSlab:              74452 kB\nSReclaimable:      17304 kB\nSUnreclaim:        57148 kB\nKernelStack:        5024 kB\nPageTables:         6048 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    12317424 kB\nCommitted_AS:    1673096 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       33500 kB\nVmallocChunk:          0 kB\nPercpu:             6528 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       56320 kB\nDirectMap2M:     8196096 kB\nDirectMap1G:    16777216 kB\n",
+    "versions": {
+      "finn": "0.0.0",
+      "qonnx": "0.3.0.post1.dev100+gfd61cfeeb",
+      "brevitas": null,
+      "onnx": "1.17.0",
+      "numpy": "1.24.1",
+      "pyverilator": "0.4.0"
+    },
+    "tools": {
+      "vivado": null,
+      "vitis_hls": null,
+      "g++": null,
+      "verilator": null,
+      "docker": "/usr/bin/docker"
+    },
+    "finn_commit": "39f0c9a6b7675f62d47390fbf9a591707bcbac9b",
+    "container_image": null,
+    "execution": "WSL venv, not FINN Docker",
+    "toolchain_compatibility": "unconfirmed until vendor tools are available",
+    "cgroup_limits": {
+      "cpu.max": "max 100000",
+      "memory.max": "max"
+    }
+  },
+  "sources": {
+    "models/05_dataflow_core.onnx": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/05_dataflow_core.onnx",
+      "sha256": "a4f74ee437f77108bff16fbcffc0c2a3b7665a4238806d956ccc4d0e8e66390d"
+    },
+    "models/05_dataflow_parent_original.onnx": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/05_dataflow_parent.onnx",
+      "sha256": "4152ca3011b5fbba4347b47025818e7c865d637511a7c9fdc80a7d314cd7c665"
+    },
+    "verification/core_input.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/core_input.npy",
+      "sha256": "301a63e78212c38e87f1e0ce2bba2306302f1a964435e6386bf12ac5740043a0"
+    },
+    "verification/core_expected_output.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/core_expected_output.npy",
+      "sha256": "1396cf939650ec9c67d3511277c8c3be9c3f0c14f60f931881eca5295919b5da"
+    },
+    "verification/input.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/input.npy",
+      "sha256": "42b1c964c600647b4614a3dea64691b59633cb89d51c35802377d4cc7b636ccd"
+    },
+    "verification/reference_output.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/reference_output.npy",
+      "sha256": "b2af4f5a671142b2d28442f13da691fc4966b493bba35035a84e3c1f779c42f7"
+    },
+    "verification/source_report.json": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/report.json",
+      "sha256": "d4f89e90143ffae1dd9df14eb72dbe0a2febf80081a9b7744dc762bf34685da8"
+    },
+    "provenance/partition_w4a4.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/partition_w4a4.py",
+      "sha256": "80589306b1b7f4f1f8ba561ee5e11f6ed613a48e050b31aaab3d5ffc559e624b"
+    },
+    "provenance/prepare_fc_boundary.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/fc_boundary_w4a4/prepare_fc_boundary.py",
+      "sha256": "fa8059ca063f97f35463737641fb26b20dd9275aafd0112708741fd2dbcab066"
+    },
+    "provenance/prepare_mnist_hw.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/mnist_hw_prepare/prepare_mnist_hw.py",
+      "sha256": "cda05c31e830a20affcab82e99a1e97957af6ac7179962b196f1bf7138c921ac"
+    }
+  },
+  "config": {
+    "board_reference": "AUP-ZU3",
+    "part": "xczu3eg-sfvc784-2-e",
+    "clock_ns": 10.0,
+    "finn_commit": "39f0c9a6b7675f62d47390fbf9a591707bcbac9b",
+    "finn_root": "/home/za_warudo/projects/finn",
+    "backend_policy": "hls",
+    "num_workers": 1,
+    "auto_folding": false,
+    "minimize_bit_width": false,
+    "fifo_policy": "pending RTL verification; do not treat default depths as validated",
+    "scope": "core only; no board shell or bitstream"
+  },
+  "config_sha256": "d7cf957ffbfb0c100d948b12589d1132b325ccc2584aa6af114fe3c90c022e28",
+  "script_sha256": "f5a873873c9edf16349d8af9dee72f7d188f718bbb4e28a25adcc653009f62ec",
+  "dwc_count": 4,
+  "verification": {
+    "comparisons": [
+      {
+        "stage": "before",
+        "samples": 18,
+        "exact_equal": true,
+        "max_abs_error": 0
+      },
+      {
+        "stage": "after_interfaces",
+        "samples": 18,
+        "exact_equal": true,
+        "max_abs_error": 0
+      }
+    ],
+    "generated_code_executed": false,
+    "scope": "Abstract Python semantics after stripping backend; FC reshape adapter only in verification copies",
+    "input_name": "Transpose_0_out0",
+    "input_shape": [
+      18,
+      28,
+      28,
+      1
+    ],
+    "input_layout": "NHWC",
+    "input_datatype": "UINT8",
+    "input_range": [
+      0.0,
+      255.0
+    ],
+    "output_name": "MatMul_3_out0",
+    "output_datatype": "INT32",
+    "output_shape": [
+      18,
+      10
+    ]
+  },
+  "generated": [
+    {
+      "node": "ConvolutionInputGenerator_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_ConvolutionInputGenerator_0_iaxmup6s",
+      "files": {
+        "top_ConvolutionInputGenerator_0.cpp": "6b48d3d587244a91ed6b2cebcfcd03f5647d18249fe173fc2c423aba966b4020",
+        "hls_syn_ConvolutionInputGenerator_0.tcl": "069a24ebb38c03250c8c0c2446d26f5dc728c32e468d8aa44c2f6ffddfbd8b1a"
+      }
+    },
+    {
+      "node": "MVAU_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_MVAU_0_5jusvupv",
+      "files": {
+        "memblock.dat": "0f385b961310506b1687be22234ca7aaf6bcdf450a470dac75f5f9ea3649460f",
+        "weights.npy": "5c4c0ce69f00709ded5c98943acbec19e741814a7cb77f00a64cfd6b454268b6",
+        "hls_syn_MVAU_0.tcl": "9d06caf984fe98ccac350fb72b3a01bb0a9449c40709d601d9a6680692254e32",
+        "top_MVAU_0.cpp": "7a4a7f0f61abd3d3bd10f74e6dcc97e381c328eb9373fd158a21e04d181c1e26",
+        "thresh.h": "4dd32d9391121569f835c0c86c8d471d7b4b9bacb125cb519d987b35f54061f4"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingDataWidthConverter_0_8i8pj7t2",
+      "files": {
+        "hls_syn_StreamingDataWidthConverter_0.tcl": "d2e8ddcb4ada0a5da8d2d2eb693c67dd7b02a8f7cdf79027577e930f1cc0a3f6",
+        "top_StreamingDataWidthConverter_0.cpp": "a6d1c709f563c8b15f347eeffbe71d75cc67873cc4c9cbb455d6a27a2bf79c4c"
+      }
+    },
+    {
+      "node": "StreamingMaxPool_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingMaxPool_0_3mi7cin5",
+      "files": {
+        "hls_syn_StreamingMaxPool_0.tcl": "cee278a756a9aab11f3756f39579ba45814097b6bd6640371d8aa81e49a08644",
+        "top_StreamingMaxPool_0.cpp": "0f59da8f47c2d6e720ed9ec0298d39ff6a381f2c570c24bb2dcf684318f2e1a1"
+      }
+    },
+    {
+      "node": "ConvolutionInputGenerator_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_ConvolutionInputGenerator_1__rfsfwl6",
+      "files": {
+        "hls_syn_ConvolutionInputGenerator_1.tcl": "60a15e293de494ffc2fe2e79457e1c745bf594af8f7b1632aed79d9220956a82",
+        "top_ConvolutionInputGenerator_1.cpp": "0064b6acf93b16e0f1b9098f848c160fccd9fb5f0164ae304014bdf9b485115d"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingDataWidthConverter_1_1wf5_a3m",
+      "files": {
+        "top_StreamingDataWidthConverter_1.cpp": "8cb599c640ee63d55d89268e5640ff8467c7cc5568e435f1c24d9e374caae7d8",
+        "hls_syn_StreamingDataWidthConverter_1.tcl": "cb23a610d34d5a4bd24ce47a8f70fb422b7bdb6f34331b6b3c11c5aed9480e16"
+      }
+    },
+    {
+      "node": "MVAU_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_MVAU_1_ibhdq8na",
+      "files": {
+        "memblock.dat": "670892181c898018f74ad8927b8ac55f7748f7ec99fc16c0bf38f8a2a94a997a",
+        "weights.npy": "e4b2fddf47e37828e1d03d4b326d72c87bc94bb023b14b5ad34e06e94447ffbc",
+        "hls_syn_MVAU_1.tcl": "c895bbf3ad379bc8931040b25a018df929681624f01f314a8df3cad3a661abf1",
+        "thresh.h": "f802f212f84f62befe8c1e00544bb813148103d0942e9f33eb027eb1559c3a13",
+        "top_MVAU_1.cpp": "3c12a29d9b929ad65a62452a139ab17a82d33616edad6c8a7e4161c4a7d0577d"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_2",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingDataWidthConverter_2_y0hxhcsw",
+      "files": {
+        "hls_syn_StreamingDataWidthConverter_2.tcl": "73d8028f1b5126ba274c66aeabb9f5b6e91f9094e2b0d4fef8fb8c1c82fe6154",
+        "top_StreamingDataWidthConverter_2.cpp": "2bd0237b20cd9cdd84d3da716fdd27bf2f7744d3d3496ca78a9b146bf956cb3f"
+      }
+    },
+    {
+      "node": "StreamingMaxPool_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingMaxPool_1_vajgefwd",
+      "files": {
+        "top_StreamingMaxPool_1.cpp": "855b771f940fe862b74a9797010ac1a86fa070109a02f9439311c08ca2d43d4c",
+        "hls_syn_StreamingMaxPool_1.tcl": "902c1b41972bb55c4ea5b06aba68d3c971e66df00d1b7d1497e64f60780baad0"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_3",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_StreamingDataWidthConverter_3_erym9gos",
+      "files": {
+        "top_StreamingDataWidthConverter_3.cpp": "7bfc8a17b99853a210863950fc43c0cae00748e8c056a8957ecb7954217ccde4",
+        "hls_syn_StreamingDataWidthConverter_3.tcl": "89f1324d51356350e70ba0e70bb5a0830efbde44add4e429433831efce51e5a7"
+      }
+    },
+    {
+      "node": "MVAU_2",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_MVAU_2_swttclrv",
+      "files": {
+        "memblock.dat": "f7720d757a75da976f7a9d6631657e3ada552e57e3f1610965c904312ce7b1a1",
+        "weights.npy": "6fc5d7a18757833f993a1f7edfe7eca0ea8128f925bd3f5a1dccabaa52f159ef",
+        "hls_syn_MVAU_2.tcl": "7322dc2988bc867a20b8af3420108d454509a9d2cdb50bf4c7815bd1d3b2a145",
+        "thresh.h": "4f44663c6d04bdf28df270167944070eff6c7d338dba84b8e4c24cf499de1ab0",
+        "top_MVAU_2.cpp": "6d184992955875828fe5fb1f622fab10d8fdcc0762f339ade7c2c3ca7fa7805e"
+      }
+    },
+    {
+      "node": "MVAU_3",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_initial/generated/code_gen_ipgen_MVAU_3_erxiss4t",
+      "files": {
+        "memblock.dat": "a8f9bc9047858af31a27b838abc9f02b3c3116cf6151f41c0c3be201d0eaa041",
+        "weights.npy": "0e848a7f5bf07baab1d7ef1e62316b146e7fa355be54afda483345c35230a3a0",
+        "hls_syn_MVAU_3.tcl": "670331f3552959c44ed176ad668b09fc3780eeafda11fbc5097adbe303363a11",
+        "top_MVAU_3.cpp": "542dd22f71d139add7cddc03431ec2f709b1a91a9b68d4b06ae328ec3673df35"
+      }
+    }
+  ],
+  "hlslib": {
+    "path": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/deps/finn-hlslib",
+    "available": true,
+    "required_commit": "16e5847a5e3ef76cffe84c8fad2f010d593457d3",
+    "actual_commit": "16e5847a5e3ef76cffe84c8fad2f010d593457d3"
+  },
+  "blockers": [
+    "vitis_hls not on WSL PATH",
+    "vivado not on WSL PATH",
+    "g++ not on WSL PATH",
+    "verilator not on WSL PATH"
+  ],
+  "remaining": [
+    "vendor part/version/license smoke check",
+    "HLS C++ simulation",
+    "HLS synthesis and per-layer RTL/IP",
+    "FIFO insertion/sizing, codegen and IP rebuild",
+    "stitched IP",
+    "multi-input RTL verification with timeout/backpressure",
+    "parent postprocessing equivalence",
+    "three full hardware builds and timing aggregation"
+  ]
+}

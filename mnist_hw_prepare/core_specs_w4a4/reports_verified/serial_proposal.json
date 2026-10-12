@@ -1,0 +1,131 @@
+{
+  "status": "proposal_only_not_backend_validated",
+  "node_config": {
+    "ConvolutionInputGenerator_0": {
+      "SIMD": 1
+    },
+    "MVAU_0": {
+      "PE": 1,
+      "SIMD": 1
+    },
+    "ConvolutionInputGenerator_1": {
+      "SIMD": 1
+    },
+    "MVAU_1": {
+      "PE": 1,
+      "SIMD": 1
+    },
+    "MVAU_2": {
+      "PE": 1,
+      "SIMD": 1
+    },
+    "MVAU_3": {
+      "PE": 1,
+      "SIMD": 1
+    }
+  },
+  "mvau_analysis": {
+    "MVAU_0": {
+      "PE": 1,
+      "SIMD": 1,
+      "neuron_folds": 16,
+      "synapse_folds": 25,
+      "ideal_mac_iterations_per_image": 230400,
+      "parallel_mac_lanes": 1,
+      "input_stream_bits": 8,
+      "output_stream_bits": 4,
+      "weight_bits_per_pe": 4
+    },
+    "MVAU_1": {
+      "PE": 1,
+      "SIMD": 1,
+      "neuron_folds": 32,
+      "synapse_folds": 400,
+      "ideal_mac_iterations_per_image": 819200,
+      "parallel_mac_lanes": 1,
+      "input_stream_bits": 4,
+      "output_stream_bits": 4,
+      "weight_bits_per_pe": 4
+    },
+    "MVAU_2": {
+      "PE": 1,
+      "SIMD": 1,
+      "neuron_folds": 128,
+      "synapse_folds": 512,
+      "ideal_mac_iterations_per_image": 65536,
+      "parallel_mac_lanes": 1,
+      "input_stream_bits": 4,
+      "output_stream_bits": 4,
+      "weight_bits_per_pe": 4
+    },
+    "MVAU_3": {
+      "PE": 1,
+      "SIMD": 1,
+      "neuron_folds": 10,
+      "synapse_folds": 128,
+      "ideal_mac_iterations_per_image": 1280,
+      "parallel_mac_lanes": 1,
+      "input_stream_bits": 4,
+      "output_stream_bits": 32,
+      "weight_bits_per_pe": 4
+    }
+  },
+  "stream_edges": [
+    {
+      "producer": "ConvolutionInputGenerator_0",
+      "consumer": "MVAU_0",
+      "producer_bits": 8,
+      "consumer_bits": 8,
+      "width_conversion_needed": false,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "MVAU_0",
+      "consumer": "StreamingMaxPool_0",
+      "producer_bits": 4,
+      "consumer_bits": 64,
+      "width_conversion_needed": true,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "StreamingMaxPool_0",
+      "consumer": "ConvolutionInputGenerator_1",
+      "producer_bits": 64,
+      "consumer_bits": 4,
+      "width_conversion_needed": true,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "ConvolutionInputGenerator_1",
+      "consumer": "MVAU_1",
+      "producer_bits": 4,
+      "consumer_bits": 4,
+      "width_conversion_needed": false,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "MVAU_1",
+      "consumer": "StreamingMaxPool_1",
+      "producer_bits": 4,
+      "consumer_bits": 128,
+      "width_conversion_needed": true,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "StreamingMaxPool_1",
+      "consumer": "MVAU_2",
+      "producer_bits": 128,
+      "consumer_bits": 4,
+      "width_conversion_needed": true,
+      "integer_width_ratio": true
+    },
+    {
+      "producer": "MVAU_2",
+      "consumer": "MVAU_3",
+      "producer_bits": 4,
+      "consumer_bits": 4,
+      "width_conversion_needed": false,
+      "integer_width_ratio": true
+    }
+  ]
+}

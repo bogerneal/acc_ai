@@ -1,0 +1,12 @@
+{
+  "status": "blocked",
+  "layers": [],
+  "ipgen_seconds": null,
+  "cppsim": "not_run_by_this_script",
+  "stitched_core": false,
+  "tools": {
+    "vivado": null,
+    "vitis_hls": null
+  },
+  "reason": "Missing WSL tools: vivado, vitis_hls"
+}

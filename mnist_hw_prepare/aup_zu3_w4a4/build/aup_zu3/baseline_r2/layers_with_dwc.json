@@ -1,0 +1,366 @@
+[
+  {
+    "name": "ConvolutionInputGenerator_0",
+    "op_type": "ConvolutionInputGenerator_hls",
+    "input_shape": [
+      1,
+      28,
+      28,
+      1
+    ],
+    "output_shape": [
+      1,
+      24,
+      24,
+      25
+    ],
+    "input_datatype": "UINT8",
+    "output_datatype": "UINT8",
+    "SIMD": 1,
+    "ram_style": "distributed",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 8,
+    "output_stream_bits": 8,
+    "estimated_cycles": 14540
+  },
+  {
+    "name": "MVAU_0",
+    "op_type": "MVAU_hls",
+    "input_shape": [
+      1,
+      24,
+      24,
+      25
+    ],
+    "output_shape": [
+      1,
+      24,
+      24,
+      16
+    ],
+    "input_datatype": "UINT8",
+    "output_datatype": "UINT4",
+    "PE": 1,
+    "SIMD": 1,
+    "MW": 25,
+    "MH": 16,
+    "mem_mode": "internal_decoupled",
+    "ram_style": "auto",
+    "resType": "auto",
+    "weightDataType": "INT4",
+    "accDataType": "INT32",
+    "noActivation": 0,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 8,
+    "output_stream_bits": 4,
+    "estimated_cycles": 230400
+  },
+  {
+    "name": "StreamingDataWidthConverter_0",
+    "op_type": "StreamingDataWidthConverter_hls",
+    "input_shape": [
+      1,
+      24,
+      24,
+      16
+    ],
+    "output_shape": [
+      1,
+      24,
+      24,
+      16
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 4,
+    "output_stream_bits": 64,
+    "estimated_cycles": 0
+  },
+  {
+    "name": "StreamingMaxPool_0",
+    "op_type": "StreamingMaxPool_hls",
+    "input_shape": [
+      1,
+      24,
+      24,
+      16
+    ],
+    "output_shape": [
+      1,
+      12,
+      12,
+      16
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "PE": 1,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 64,
+    "output_stream_bits": 64,
+    "estimated_cycles": 720
+  },
+  {
+    "name": "ConvolutionInputGenerator_1",
+    "op_type": "ConvolutionInputGenerator_hls",
+    "input_shape": [
+      1,
+      12,
+      12,
+      16
+    ],
+    "output_shape": [
+      1,
+      8,
+      8,
+      400
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "SIMD": 16,
+    "ram_style": "distributed",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 64,
+    "output_stream_bits": 64,
+    "estimated_cycles": 1660
+  },
+  {
+    "name": "StreamingDataWidthConverter_1",
+    "op_type": "StreamingDataWidthConverter_hls",
+    "input_shape": [
+      1,
+      8,
+      8,
+      400
+    ],
+    "output_shape": [
+      1,
+      8,
+      8,
+      400
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 64,
+    "output_stream_bits": 4,
+    "estimated_cycles": 0
+  },
+  {
+    "name": "MVAU_1",
+    "op_type": "MVAU_hls",
+    "input_shape": [
+      1,
+      8,
+      8,
+      400
+    ],
+    "output_shape": [
+      1,
+      8,
+      8,
+      32
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "PE": 1,
+    "SIMD": 1,
+    "MW": 400,
+    "MH": 32,
+    "mem_mode": "internal_decoupled",
+    "ram_style": "auto",
+    "resType": "auto",
+    "weightDataType": "INT4",
+    "accDataType": "INT32",
+    "noActivation": 0,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 4,
+    "output_stream_bits": 4,
+    "estimated_cycles": 819200
+  },
+  {
+    "name": "StreamingDataWidthConverter_2",
+    "op_type": "StreamingDataWidthConverter_hls",
+    "input_shape": [
+      1,
+      8,
+      8,
+      32
+    ],
+    "output_shape": [
+      1,
+      8,
+      8,
+      32
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 4,
+    "output_stream_bits": 128,
+    "estimated_cycles": 0
+  },
+  {
+    "name": "StreamingMaxPool_1",
+    "op_type": "StreamingMaxPool_hls",
+    "input_shape": [
+      1,
+      8,
+      8,
+      32
+    ],
+    "output_shape": [
+      1,
+      4,
+      4,
+      32
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "PE": 1,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 128,
+    "output_stream_bits": 128,
+    "estimated_cycles": 80
+  },
+  {
+    "name": "StreamingDataWidthConverter_3",
+    "op_type": "StreamingDataWidthConverter_hls",
+    "input_shape": [
+      1,
+      4,
+      4,
+      32
+    ],
+    "output_shape": [
+      1,
+      4,
+      4,
+      32
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 128,
+    "output_stream_bits": 4,
+    "estimated_cycles": 0
+  },
+  {
+    "name": "MVAU_2",
+    "op_type": "MVAU_hls",
+    "input_shape": [
+      1,
+      4,
+      4,
+      32
+    ],
+    "output_shape": [
+      1,
+      128
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "UINT4",
+    "PE": 1,
+    "SIMD": 1,
+    "MW": 512,
+    "MH": 128,
+    "mem_mode": "internal_decoupled",
+    "ram_style": "auto",
+    "resType": "auto",
+    "weightDataType": "INT4",
+    "accDataType": "INT32",
+    "noActivation": 0,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 4,
+    "output_stream_bits": 4,
+    "estimated_cycles": 65536
+  },
+  {
+    "name": "MVAU_3",
+    "op_type": "MVAU_hls",
+    "input_shape": [
+      1,
+      128
+    ],
+    "output_shape": [
+      1,
+      10
+    ],
+    "input_datatype": "UINT4",
+    "output_datatype": "INT32",
+    "PE": 1,
+    "SIMD": 1,
+    "MW": 128,
+    "MH": 10,
+    "mem_mode": "internal_decoupled",
+    "ram_style": "auto",
+    "resType": "auto",
+    "weightDataType": "INT4",
+    "accDataType": "INT32",
+    "noActivation": 1,
+    "inFIFODepths": [
+      2
+    ],
+    "outFIFODepths": [
+      2
+    ],
+    "input_stream_bits": 4,
+    "output_stream_bits": 32,
+    "estimated_cycles": 1280
+  }
+]

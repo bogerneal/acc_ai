@@ -1,0 +1,364 @@
+{
+  "run_id": "baseline_r2",
+  "status": "sources_generated_hardware_validation_pending",
+  "events": [
+    {
+      "name": "T_prepare",
+      "status": "passed",
+      "seconds": 0.14865828000006331
+    },
+    {
+      "name": "T_stream_interfaces",
+      "status": "passed",
+      "seconds": 0.01098588699994707
+    },
+    {
+      "name": "T_verify_python",
+      "status": "passed",
+      "seconds": 27.63441508400001
+    },
+    {
+      "name": "T_codegen",
+      "status": "passed",
+      "seconds": 1.59206876799999
+    }
+  ],
+  "hls_synthesis": "not_run",
+  "cppsim": "not_run",
+  "rtlsim": "not_run",
+  "stitch": "not_run",
+  "fifo_validation": "not_run",
+  "part_support": "unconfirmed",
+  "dependency_snapshot": {
+    "runtime": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/deps/finn_runtime",
+    "hashes": {
+      "custom_hls/lookup.hpp": "d1f23fc7d1fc25a2162f289c3b09260f0b34c070b82ea1f036a5a81a5c14ea78",
+      "custom_hls/checksum.hpp": "4192bb4ac0a3b6cd50e68e912a08ce5ddee91cf4667547b93dd3c2f91f9473d8",
+      "custom_hls/checksum_tb.sv": "bb7985ca347af9103691c406e735813bc0e20a25cb4ec6990ce82491915f2dcd",
+      "custom_hls/checksum.cpp": "6fbd5a971dcca7f06e085bd60d265677138f3b527bfbd63edd8b166064e8bcd4",
+      "finn-rtllib/mvu/replay_buffer.sv": "1611f89b44d0044f23a1e9efc4766f72092f9d46b0d970bd63892678e234a6f6",
+      "finn-rtllib/mvu/mvu_8sx8u_dsp48.sv": "482840905e5a13eba28797737e37da87f0d54bb4d4f74940184106e03363e125",
+      "finn-rtllib/mvu/mvu_4sx4u.sv": "c5900491632cefc7bc872acdb1e9f7b8211f27d27bc3f8d18b57b403208a4654",
+      "finn-rtllib/mvu/mvu_vvu_8sx9_dsp58.sv": "b28a4156fa6305661c33b179c7c50ee52a98405bffcf6ec2685e307e76941c59",
+      "finn-rtllib/mvu/mvu_vvu_axi.sv": "2a11cfad43c6d2fcc3b885f47c0523f72954aef2598935713825c756683c38ba",
+      "finn-rtllib/mvu/mvu_vvu_axi_wrapper.v": "26a870e6286f46cf3023464b5cebbb6cb63ac757ed0a176e1dc2640ab33f07b3",
+      "finn-rtllib/mvu/tb/mvu_axi_tb.sv": "1652da49d482e53233e64485816ee28ea0c509f1f11320086ece105fff11aafc",
+      "finn-rtllib/mvu/tb/mvu_dsp58_tb.sv": "4efbeb0a46e32a0f8293499c2905ddbf29169ec0355cff1858cc6d66f44de334",
+      "finn-rtllib/mvu/tb/vvu_axi_tb.sv": "a524164671799bbf012836df64a7ffe9b7b1f6f6299e194476b3b5c6af2b831b",
+      "finn-rtllib/mvu/tb/mvu_8sx9_tb.sv": "c3fee6e40955cee92e22ea40e666e16a8d229e840ea31f3ec90ff430bcbf18cc",
+      "finn-rtllib/mvu/tb/replay_buffer_tb.sv": "d5c02f68e9b59d22e32457c71800b3ea4a2bedb6ce66731690c2815f76a60468",
+      "finn-rtllib/fmpadding/hdl/axi2we.sv": "9c949df20f514b57bfd2b5efaf399459d2e4c28aac951d77b0d6db48440490fb",
+      "finn-rtllib/fmpadding/hdl/fmpadding_axi_tb.sv": "ff3e678b9b2cb15266f67b419a15132a47b4753acf823760d89dee353e18d146",
+      "finn-rtllib/fmpadding/hdl/fmpadding.sv": "aeb1f0c46f6beadfda843bfeafa86d9a2279ee6be69e2b4026c45014c1aec686",
+      "finn-rtllib/fmpadding/hdl/fmpadding_template.v": "58ce91bf4c60e5f0c7cbcdd10ffeed7c462346b1a09f7d508db8a1196226feff",
+      "finn-rtllib/fmpadding/hdl/fmpadding_axi.sv": "96d840689c7572748cdb1ba62711ccbfa4d7355ec3a3f8ca3bef9470781d44c7",
+      "finn-rtllib/thresholding/hdl/thresholding_template_wrapper.v": "cce69d6980b44722afd0e47816f34fe73fa54a0ecae6e7f6ae61324767204b9b",
+      "finn-rtllib/thresholding/hdl/axilite_if.v": "f853e3e9bef2559b1f24699f0399d061e19d0e7c17e9ad31e6099b25755c2f0b",
+      "finn-rtllib/thresholding/hdl/thresholding_axi.sv": "70c5469669e6ac573931d41d5dcab7d121390c8014d15536471a8eac14882692",
+      "finn-rtllib/thresholding/hdl/thresholding.sv": "86c737c59be3b981917a8057d2209ddfa059332866935a88000ce01510c0baec",
+      "finn-rtllib/thresholding/sim/thresholding_tb.sv": "f49888e97806c5dfd27fde8996b74c7c84bd0404d0af4420b00c5185536b1f79",
+      "finn-rtllib/thresholding/sim/thresholding_axi_tb.sv": "a7318db0520fecd26389cb39e96de65a377088af9ab1a8fc5592f7053291c308",
+      "finn-rtllib/thresholding/sim/thresh_gen.sv": "d8f99f47873d34c163ace12cc6ea8c92cd45d033fe9c419b8840e4fc8310758d",
+      "finn-rtllib/axi_info/component.xml": "25767d10479d3761f54e016694adf8fe9137498a74542946fcb7fb5fbb2b079a",
+      "finn-rtllib/axi_info/hdl/axi_info.sv": "2090d8d450aae3cfbff9505335657989b26c1919b1d02037aa6752e96314aecc",
+      "finn-rtllib/axi_info/hdl/axi_info_top.sv": "5fc00120c53befcefbc8e39b5ab5f4b6f94c934e0cc32e2be9580355f8be98cf",
+      "finn-rtllib/axi_info/xgui/axi_info_top_v1_0.tcl": "a6ec169330632915936d31b78ac2369e1b74c483aff498a79b5ff232d0d2c379",
+      "finn-rtllib/dwc/hdl/dwc_template.v": "90993c16e8bcd30f6cec0b5c0d0c9abad6be65ee373dff21e2b47e59c6dc088b",
+      "finn-rtllib/dwc/hdl/dwc.sv": "8259259192ffe7337cd7855e90d375ae94ddb651f4bc0255865bab6d23c153ba",
+      "finn-rtllib/dwc/hdl/dwc_axi.sv": "a41f033cfb64605f15504c83869613e9b5b48876f7d25c3c5305e6115a235c4b",
+      "finn-rtllib/dwc/sim/dwc_axi_tb.sv": "3cd6a6815bb91c0181334ae2308df6565c8b25434a8db95430b2500e13fa563a",
+      "finn-rtllib/fifo/hdl/Q_srl.v": "954eb8b73d6b31c512ed82023a18e08686c59d1906c348767e70a6d176b50847",
+      "finn-rtllib/fifo/hdl/fifo_template.v": "65637575c0e8831bd8f6f7ae640adaf38ae26cf1345cee1738acd240c0f2e2d0",
+      "finn-rtllib/swg/swg_template_parallel.sv": "46759597e5ddc3757d724401e0808f4c4e181d5e64098dd8c3dac01a7cd08917",
+      "finn-rtllib/swg/swg_template_axilite.v": "b66fb3fe16a016291760229c79171eb2c2d8455c4b400ae240e4262f2e08c8cb",
+      "finn-rtllib/swg/swg_template_default_dynamic.sv": "3de7a330a46abaf56302879846d092db65dc60462730245482a64dc775a8636c",
+      "finn-rtllib/swg/swg_template_wrapper_dynamic.v": "68bf9343cfa32d264e69efdd24582e21f57748af6ca89c8af1f0aaa0c7039162",
+      "finn-rtllib/swg/swg_common.sv": "cbaef6293f6fc41a8eafd2071d804c0f2718d887ee30c2880f6ef6c73564402c",
+      "finn-rtllib/swg/swg_template_wrapper.v": "f04e1ceca69d97b0225f29279e65c1c0de6ab4ca9c4cdd6dc12e2427ca68f8c4",
+      "finn-rtllib/swg/swg_template_default.sv": "64cda0fcacdb8576f70ecd8d06bfeccf4e71c39184d0ff8382098b18c6dfa626",
+      "finn-rtllib/swg/swg_pkg.sv": "5212c2f69443ca041e92ecfc5829e2169055b0262ca410101de449a87badaab9",
+      "finn-rtllib/memstream/component.xml": "6f28a41e9832df3915973b24b00c6e98415c92e190af79663870f9c68afbead0",
+      "finn-rtllib/memstream/hdl/memstream_axi.sv": "63ac29dbb063d447a9b2252cb47bd021b4fa5930acece8a6ca760c1df3a9dd53",
+      "finn-rtllib/memstream/hdl/Q_srl.v": "4aa7fbb72754c1293618dfc8a5229701eb6053e93188b31e5fb16c44c63d3646",
+      "finn-rtllib/memstream/hdl/memstream_axi_wrapper.v": "21dcd7ff31defab007990072d478661f11af1ab1e6ac0814a330f6b844726182",
+      "finn-rtllib/memstream/hdl/axilite_if.v": "ad8d5aeba34008f03aaff86817e18e7a31f9bfcbe0b831deff238831718c3ff6",
+      "finn-rtllib/memstream/hdl/memstream.sv": "8868584bf8815cca879630b4767e0fcacc9e6a8de9e8e96cc39486d2b2be362f",
+      "finn-rtllib/memstream/doc/README": "0f75189f08ceeb44208cda5fdaa9b2b4576ef680c6d80f6e36457661b16fcea9",
+      "finn-rtllib/memstream/sim/memstream_tb.sv": "ffbface263eb4238afe8d7870a5edcd3126ce73c4a7fe124e8b773f03e1968de",
+      "finn-rtllib/memstream/xgui/memstream_v1_0.tcl": "d40c571ec6504c6a93f3d7870d03f52e3feedaf04266c91b85b3d6923422cb4d",
+      "finn-rtllib/memstream/gui/memstream_v1_0.gtcl": "8dcddad82b6d98213510a136ce9ff49c3c9e0dfa2567f5cd0f0e96a416ab802a"
+    }
+  },
+  "environment": {
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "executable": "/home/za_warudo/projects/mnist_cnn/.venv-finn/bin/python",
+    "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "cpu_count": 12,
+    "cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 151\nmodel name\t: 12th Gen Intel(R) Core(TM) i5-12400\nstepping\t: 2\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 2495.999\ncache size\t: 18432 KB\nphysical id\t: 0\nsiblings\t: 12\ncore id\t\t: 0\ncpu cores\t: 6\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 21\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves umip gfni vaes vpclmulqdq rdpid fsrm md_clear flush_l1d arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed eibrs_pbrsb bhi spectre_v2_user its\nbogomips\t: 4991.99\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 39 bits physical, 48 bits virtual\npower management:",
+    "meminfo": "MemTotal:       16246240 kB\nMemFree:        15386728 kB\nMemAvailable:   15572800 kB\nBuffers:           13044 kB\nCached:           355332 kB\nSwapCached:            0 kB\nActive:            51112 kB\nInactive:         480676 kB\nActive(anon):       3120 kB\nInactive(anon):   164432 kB\nActive(file):      47992 kB\nInactive(file):   316244 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:       4194304 kB\nSwapFree:        4194304 kB\nDirty:              2476 kB\nWriteback:             0 kB\nAnonPages:        163668 kB\nMapped:           262276 kB\nShmem:              4140 kB\nKReclaimable:      17252 kB\nSlab:              74920 kB\nSReclaimable:      17252 kB\nSUnreclaim:        57668 kB\nKernelStack:        4912 kB\nPageTables:         6128 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    12317424 kB\nCommitted_AS:    1654424 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       33288 kB\nVmallocChunk:          0 kB\nPercpu:             6528 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       56320 kB\nDirectMap2M:     8196096 kB\nDirectMap1G:    16777216 kB\n",
+    "versions": {
+      "finn": "0.0.0",
+      "qonnx": "0.3.0.post1.dev100+gfd61cfeeb",
+      "brevitas": null,
+      "onnx": "1.17.0",
+      "numpy": "1.24.1",
+      "pyverilator": "0.4.0"
+    },
+    "tools": {
+      "vivado": null,
+      "vitis_hls": null,
+      "g++": null,
+      "verilator": null,
+      "docker": "/usr/bin/docker"
+    },
+    "finn_commit": "39f0c9a6b7675f62d47390fbf9a591707bcbac9b",
+    "container_image": null,
+    "execution": "WSL venv, not FINN Docker",
+    "toolchain_compatibility": "unconfirmed until vendor tools are available",
+    "expected_vendor_version": "2022.2",
+    "cgroup_limits": {
+      "cpu.max": "max 100000",
+      "memory.max": "max"
+    }
+  },
+  "sources": {
+    "models/05_dataflow_core.onnx": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/05_dataflow_core.onnx",
+      "sha256": "a4f74ee437f77108bff16fbcffc0c2a3b7665a4238806d956ccc4d0e8e66390d"
+    },
+    "models/05_dataflow_parent_original.onnx": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/05_dataflow_parent.onnx",
+      "sha256": "4152ca3011b5fbba4347b47025818e7c865d637511a7c9fdc80a7d314cd7c665"
+    },
+    "verification/core_input.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/core_input.npy",
+      "sha256": "301a63e78212c38e87f1e0ce2bba2306302f1a964435e6386bf12ac5740043a0"
+    },
+    "verification/core_expected_output.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/core_expected_output.npy",
+      "sha256": "1396cf939650ec9c67d3511277c8c3be9c3f0c14f60f931881eca5295919b5da"
+    },
+    "verification/input.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/input.npy",
+      "sha256": "42b1c964c600647b4614a3dea64691b59633cb89d51c35802377d4cc7b636ccd"
+    },
+    "verification/reference_output.npy": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/reference_output.npy",
+      "sha256": "b2af4f5a671142b2d28442f13da691fc4966b493bba35035a84e3c1f779c42f7"
+    },
+    "verification/source_report.json": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/verified/report.json",
+      "sha256": "d4f89e90143ffae1dd9df14eb72dbe0a2febf80081a9b7744dc762bf34685da8"
+    },
+    "provenance/partition_w4a4.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/dataflow_partition_w4a4/partition_w4a4.py",
+      "sha256": "80589306b1b7f4f1f8ba561ee5e11f6ed613a48e050b31aaab3d5ffc559e624b"
+    },
+    "provenance/prepare_fc_boundary.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/fc_boundary_w4a4/prepare_fc_boundary.py",
+      "sha256": "fa8059ca063f97f35463737641fb26b20dd9275aafd0112708741fd2dbcab066"
+    },
+    "provenance/prepare_mnist_hw.py": {
+      "source": "/home/za_warudo/projects/mnist_hw_prepare/mnist_hw_prepare/prepare_mnist_hw.py",
+      "sha256": "cda05c31e830a20affcab82e99a1e97957af6ac7179962b196f1bf7138c921ac"
+    }
+  },
+  "config": {
+    "board_reference": "AUP-ZU3",
+    "part": "xczu3eg-sfvc784-2-e",
+    "clock_ns": 10.0,
+    "finn_commit": "39f0c9a6b7675f62d47390fbf9a591707bcbac9b",
+    "finn_root": "/home/za_warudo/projects/finn",
+    "backend_policy": "hls",
+    "num_workers": 1,
+    "expected_vendor_version": "2022.2",
+    "auto_folding": false,
+    "minimize_bit_width": false,
+    "fifo_policy": "pending RTL verification; do not treat default depths as validated",
+    "scope": "core only; no board shell or bitstream"
+  },
+  "config_sha256": "a1871ff769a4915d179509ceed206fff5260fffe8a1afb7187727cb967760c19",
+  "script_sha256": "81e6a9d3f4667fcbc1ee4e719de84c8e98400736a7f311d73112322bf13c8c1f",
+  "dwc_count": 4,
+  "verification": {
+    "comparisons": [
+      {
+        "stage": "before",
+        "samples": 18,
+        "exact_equal": true,
+        "max_abs_error": 0
+      },
+      {
+        "stage": "after_interfaces",
+        "samples": 18,
+        "exact_equal": true,
+        "max_abs_error": 0
+      }
+    ],
+    "generated_code_executed": false,
+    "scope": "Abstract Python semantics after stripping backend; FC reshape adapter only in verification copies",
+    "sample_source": "18 synthetic samples inherited from partition verification, not MNIST accuracy",
+    "input_name": "Transpose_0_out0",
+    "input_shape": [
+      18,
+      28,
+      28,
+      1
+    ],
+    "input_layout": "NHWC",
+    "input_datatype": "UINT8",
+    "input_range": [
+      0.0,
+      255.0
+    ],
+    "output_name": "MatMul_3_out0",
+    "output_datatype": "INT32",
+    "output_shape": [
+      18,
+      10
+    ]
+  },
+  "generated": [
+    {
+      "node": "ConvolutionInputGenerator_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_ConvolutionInputGenerator_0_pa9mmllg",
+      "files": {
+        "top_ConvolutionInputGenerator_0.cpp": "6b48d3d587244a91ed6b2cebcfcd03f5647d18249fe173fc2c423aba966b4020",
+        "hls_syn_ConvolutionInputGenerator_0.tcl": "58bd77528e222860cd0d81cde07a00520bdb521fb85b96fb2520117438e55fc5"
+      }
+    },
+    {
+      "node": "MVAU_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_MVAU_0_0tb83n74",
+      "files": {
+        "memblock.dat": "0f385b961310506b1687be22234ca7aaf6bcdf450a470dac75f5f9ea3649460f",
+        "weights.npy": "5c4c0ce69f00709ded5c98943acbec19e741814a7cb77f00a64cfd6b454268b6",
+        "hls_syn_MVAU_0.tcl": "30b563c32aadb288151b13859da478235199b7e0eb500cfdcd3b6fd4eb7b10d6",
+        "top_MVAU_0.cpp": "7a4a7f0f61abd3d3bd10f74e6dcc97e381c328eb9373fd158a21e04d181c1e26",
+        "thresh.h": "4dd32d9391121569f835c0c86c8d471d7b4b9bacb125cb519d987b35f54061f4"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingDataWidthConverter_0_7zw_duut",
+      "files": {
+        "hls_syn_StreamingDataWidthConverter_0.tcl": "732e74278bf7733e7cdd960cc53052e22d311df5e22e4a03e3de6ae257e1ee5f",
+        "top_StreamingDataWidthConverter_0.cpp": "a6d1c709f563c8b15f347eeffbe71d75cc67873cc4c9cbb455d6a27a2bf79c4c"
+      }
+    },
+    {
+      "node": "StreamingMaxPool_0",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingMaxPool_0_vic_j1ut",
+      "files": {
+        "hls_syn_StreamingMaxPool_0.tcl": "d444f95c653f760fda1ecebdf2246a43890a9b8d2d38257cee9693af620cbc66",
+        "top_StreamingMaxPool_0.cpp": "0f59da8f47c2d6e720ed9ec0298d39ff6a381f2c570c24bb2dcf684318f2e1a1"
+      }
+    },
+    {
+      "node": "ConvolutionInputGenerator_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_ConvolutionInputGenerator_1_f4no08_2",
+      "files": {
+        "hls_syn_ConvolutionInputGenerator_1.tcl": "8452d9cbb71a2676af65169f4a967176f19ad870bb3c888c52ffa86bfa2051e7",
+        "top_ConvolutionInputGenerator_1.cpp": "0064b6acf93b16e0f1b9098f848c160fccd9fb5f0164ae304014bdf9b485115d"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingDataWidthConverter_1_wm8qrem9",
+      "files": {
+        "top_StreamingDataWidthConverter_1.cpp": "8cb599c640ee63d55d89268e5640ff8467c7cc5568e435f1c24d9e374caae7d8",
+        "hls_syn_StreamingDataWidthConverter_1.tcl": "4f4cf6bcb03d7e7e34c28530ac44c03906872c815b7ce62bfa9500b63c518cec"
+      }
+    },
+    {
+      "node": "MVAU_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_MVAU_1_ivynuf_k",
+      "files": {
+        "memblock.dat": "670892181c898018f74ad8927b8ac55f7748f7ec99fc16c0bf38f8a2a94a997a",
+        "weights.npy": "e4b2fddf47e37828e1d03d4b326d72c87bc94bb023b14b5ad34e06e94447ffbc",
+        "hls_syn_MVAU_1.tcl": "0b757fd47bac1d66f3d29f7d5b6e77ad6f1c3ea872550b7cde2db37d311d6ac2",
+        "thresh.h": "f802f212f84f62befe8c1e00544bb813148103d0942e9f33eb027eb1559c3a13",
+        "top_MVAU_1.cpp": "3c12a29d9b929ad65a62452a139ab17a82d33616edad6c8a7e4161c4a7d0577d"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_2",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingDataWidthConverter_2_mjhh3z45",
+      "files": {
+        "hls_syn_StreamingDataWidthConverter_2.tcl": "6c2add967cc3f62e1802056c453e0ec2383ce89087af5ded6fcc2a0ac538c0f8",
+        "top_StreamingDataWidthConverter_2.cpp": "2bd0237b20cd9cdd84d3da716fdd27bf2f7744d3d3496ca78a9b146bf956cb3f"
+      }
+    },
+    {
+      "node": "StreamingMaxPool_1",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingMaxPool_1__4rzr1mv",
+      "files": {
+        "top_StreamingMaxPool_1.cpp": "855b771f940fe862b74a9797010ac1a86fa070109a02f9439311c08ca2d43d4c",
+        "hls_syn_StreamingMaxPool_1.tcl": "83abd422b8ebd44dbd5d98cde6a58fe2e54c7bd4d968f1c3b5aba2588a504e2e"
+      }
+    },
+    {
+      "node": "StreamingDataWidthConverter_3",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_StreamingDataWidthConverter_3_gpxpx8wf",
+      "files": {
+        "top_StreamingDataWidthConverter_3.cpp": "7bfc8a17b99853a210863950fc43c0cae00748e8c056a8957ecb7954217ccde4",
+        "hls_syn_StreamingDataWidthConverter_3.tcl": "9c61518db5eb59b6944dc3bb8c99adbd542e206e9626d38acb6cc35cf40c6b5a"
+      }
+    },
+    {
+      "node": "MVAU_2",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_MVAU_2_4uibe_62",
+      "files": {
+        "memblock.dat": "f7720d757a75da976f7a9d6631657e3ada552e57e3f1610965c904312ce7b1a1",
+        "weights.npy": "6fc5d7a18757833f993a1f7edfe7eca0ea8128f925bd3f5a1dccabaa52f159ef",
+        "hls_syn_MVAU_2.tcl": "5c1c5c5e2b09d164ad491b37e94d2fc1ef69536f4fdb657996033090b74d85b0",
+        "thresh.h": "4f44663c6d04bdf28df270167944070eff6c7d338dba84b8e4c24cf499de1ab0",
+        "top_MVAU_2.cpp": "6d184992955875828fe5fb1f622fab10d8fdcc0762f339ade7c2c3ca7fa7805e"
+      }
+    },
+    {
+      "node": "MVAU_3",
+      "backend": "hls",
+      "directory": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/build/aup_zu3/baseline_r2/generated/code_gen_ipgen_MVAU_3_85wyxnjk",
+      "files": {
+        "memblock.dat": "a8f9bc9047858af31a27b838abc9f02b3c3116cf6151f41c0c3be201d0eaa041",
+        "weights.npy": "0e848a7f5bf07baab1d7ef1e62316b146e7fa355be54afda483345c35230a3a0",
+        "hls_syn_MVAU_3.tcl": "c1dd4fce64ca51d5afa41fbaf227540df87f63d55a97809e98c6e0c940698ea5",
+        "top_MVAU_3.cpp": "542dd22f71d139add7cddc03431ec2f709b1a91a9b68d4b06ae328ec3673df35"
+      }
+    }
+  ],
+  "hlslib": {
+    "path": "/home/za_warudo/projects/mnist_hw_prepare/aup_zu3_w4a4/deps/finn-hlslib",
+    "available": true,
+    "required_commit": "16e5847a5e3ef76cffe84c8fad2f010d593457d3",
+    "actual_commit": "16e5847a5e3ef76cffe84c8fad2f010d593457d3"
+  },
+  "blockers": [
+    "vitis_hls not on WSL PATH",
+    "vivado not on WSL PATH",
+    "g++ not on WSL PATH",
+    "verilator not on WSL PATH"
+  ],
+  "remaining": [
+    "vendor part/version/license smoke check",
+    "HLS C++ simulation",
+    "HLS synthesis and per-layer RTL/IP",
+    "FIFO insertion/sizing, codegen and IP rebuild",
+    "stitched IP",
+    "multi-input RTL verification with timeout/backpressure",
+    "parent postprocessing equivalence",
+    "three full hardware builds and timing aggregation"
+  ]
+}

@@ -1,0 +1,9 @@
+name,op,input_shape,output_shape,input_type,output_type,weight_type,MW,MH,current_PE,current_SIMD,current_input_stream_bits,current_output_stream_bits
+ConvolutionInputGenerator_0,ConvolutionInputGenerator,"[1, 28, 28, 1]","[1, 24, 24, 25]",UINT8,UINT8,,,,,1,8,8
+MVAU_0,MVAU,"[1, 24, 24, 25]","[1, 24, 24, 16]",UINT8,UINT4,INT4,25,16,1,1,8,4
+StreamingMaxPool_0,StreamingMaxPool,"[1, 24, 24, 16]","[1, 12, 12, 16]",UINT4,UINT4,,,,1,,64,64
+ConvolutionInputGenerator_1,ConvolutionInputGenerator,"[1, 12, 12, 16]","[1, 8, 8, 400]",UINT4,UINT4,,,,,16,64,64
+MVAU_1,MVAU,"[1, 8, 8, 400]","[1, 8, 8, 32]",UINT4,UINT4,INT4,400,32,1,1,4,4
+StreamingMaxPool_1,StreamingMaxPool,"[1, 8, 8, 32]","[1, 4, 4, 32]",UINT4,UINT4,,,,1,,128,128
+MVAU_2,MVAU,"[1, 4, 4, 32]","[1, 128]",UINT4,UINT4,INT4,512,128,1,1,4,4
+MVAU_3,MVAU,"[1, 128]","[1, 10]",UINT4,INT32,INT4,128,10,1,1,4,32

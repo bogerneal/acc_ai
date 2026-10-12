@@ -1,0 +1,13 @@
+profile,node,PE,SIMD,neuron_folds,synapse_folds,ideal_mac_iterations_per_image,parallel_mac_lanes,input_stream_bits,output_stream_bits,weight_bits_per_pe
+serial,MVAU_0,1,1,16,25,230400,1,8,4,4
+serial,MVAU_1,1,1,32,400,819200,1,4,4,4
+serial,MVAU_2,1,1,128,512,65536,1,4,4,4
+serial,MVAU_3,1,1,10,128,1280,1,4,32,4
+small,MVAU_0,4,1,4,25,57600,4,8,16,4
+small,MVAU_1,4,4,8,100,51200,16,16,16,16
+small,MVAU_2,4,4,32,128,4096,16,16,16,16
+small,MVAU_3,2,4,5,32,160,8,16,64,16
+wider,MVAU_0,8,5,2,5,5760,40,40,32,20
+wider,MVAU_1,8,8,4,50,12800,64,32,32,32
+wider,MVAU_2,8,8,16,64,1024,64,32,32,32
+wider,MVAU_3,5,8,2,16,32,40,32,160,32

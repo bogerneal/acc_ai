@@ -1,0 +1,9 @@
+[console_scripts]
+brevitas_bnn_pynq_train = brevitas_examples.bnn_pynq.bnn_pynq_train:main
+brevitas_melgan_preprocess = brevitas_examples.text_to_speech.preprocess_dataset:main
+brevitas_melgan_val = brevitas_examples.text_to_speech.melgan_val:main
+brevitas_ptq_imagenet_val = brevitas_examples.imagenet_classification.ptq.ptq_evaluate:main
+brevitas_ptq_llm = brevitas_examples.llm.main:main
+brevitas_qat_imagenet_val = brevitas_examples.imagenet_classification.qat.imagenet_val:main
+brevitas_quartznet_preprocess = brevitas_examples.speech_to_text.get_librispeech_data:main
+brevitas_quartznet_val = brevitas_examples.speech_to_text.quartznet_val:main

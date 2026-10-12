@@ -1,0 +1,6 @@
+#!/home/za_warudo/projects/mnist_cnn/.venv/bin/python
+import sys
+from qonnx.util.test import qonnx_download_model
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(qonnx_download_model())

@@ -1,0 +1,14 @@
+{
+  "board_reference": "AUP-ZU3",
+  "part": "xczu3eg-sfvc784-2-e",
+  "clock_ns": 10.0,
+  "finn_commit": "39f0c9a6b7675f62d47390fbf9a591707bcbac9b",
+  "finn_root": "/home/za_warudo/projects/finn",
+  "backend_policy": "hls",
+  "num_workers": 1,
+  "expected_vendor_version": "2022.2",
+  "auto_folding": false,
+  "minimize_bit_width": false,
+  "fifo_policy": "pending RTL verification; do not treat default depths as validated",
+  "scope": "core only; no board shell or bitstream"
+}

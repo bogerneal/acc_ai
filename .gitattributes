@@ -1,0 +1,1 @@
+mnist_cnn/.venv/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so filter=lfs diff=lfs merge=lfs -text

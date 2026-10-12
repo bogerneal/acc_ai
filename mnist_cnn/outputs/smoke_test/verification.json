@@ -1,0 +1,18 @@
+{
+  "trained": false,
+  "versions": {
+    "torch": "2.5.1+cpu",
+    "brevitas": "0.13.2",
+    "onnx": "1.17.0",
+    "qonnx": "1.0.0"
+  },
+  "qonnx_nodes": {
+    "Quant": 6,
+    "Conv": 2,
+    "Relu": 2,
+    "MaxPool": 2,
+    "Reshape": 1,
+    "MatMul": 1
+  },
+  "qonnx_max_abs_error": 6.705522537231445e-08
+}

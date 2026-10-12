@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: unfoldNd
+Version: 0.2.3
+Summary: N-dimensional unfold (im2col) and fold (col2im) in PyTorch
+Home-page: https://github.com/f-dangel/unfoldNd
+Author: Felix Dangel
+Author-email: 
+License: MIT
+Keywords: PyTorch,im2col,col2im,unfold,fold
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: packaging
+Requires-Dist: torch
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: coveralls; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-optional-tests; extra == "test"
+Provides-Extra: lint
+Requires-Dist: black; extra == "lint"
+Requires-Dist: flake8; extra == "lint"
+Requires-Dist: mccabe; extra == "lint"
+Requires-Dist: pycodestyle; extra == "lint"
+Requires-Dist: pyflakes; extra == "lint"
+Requires-Dist: pep8-naming; extra == "lint"
+Requires-Dist: flake8-bugbear; extra == "lint"
+Requires-Dist: flake8-comprehensions; extra == "lint"
+Requires-Dist: flake8-tidy-imports; extra == "lint"
+Requires-Dist: darglint; extra == "lint"
+Requires-Dist: pydocstyle; extra == "lint"
+Requires-Dist: isort; extra == "lint"
+
+N-dimensional unfold (im2col) and fold (col2im) in PyTorch
